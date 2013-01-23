@@ -48,4 +48,5 @@
 - (void)notifyUserWithTitle:(NSString *)title informativeText:(NSString *)informativeText;
 - (void)handleUrl:(NSURL *)url withBlock:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success;
 - (void)handleWeatherTimer:(NSTimer *)timer;
+- (void)deduplicateRunningInstances;
 @end

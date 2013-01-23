@@ -19,6 +19,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    // Check duplicate instances
+    [self deduplicateRunningInstances];
+    
+    // Check for locationName in user defaults
     if ([[NSUserDefaults standardUserDefaults] stringForKey:@"locationName"])
     {
         weatherTimer = [NSTimer scheduledTimerWithTimeInterval:kWWOUpdateInterval
@@ -104,6 +108,7 @@
     [operation start];
 }
 
+// Send request to worldweatheronline.com to find out current condition
 - (void)handleWeatherTimer:(NSTimer *)timer
 {
     NSLog(@"Updating weather…");
@@ -150,5 +155,16 @@
     }
 }
 
+
+//Check for duplicating running instances of application
+- (void)deduplicateRunningInstances
+{
+    if ([[NSRunningApplication runningApplicationsWithBundleIdentifier:[[NSBundle mainBundle] bundleIdentifier]] count] > 1)
+    {
+        NSLog(@"Another copy of %@ is already running.", [[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleNameKey]);
+        
+        [NSApp terminate:nil];
+    }
+}
 
 @end
