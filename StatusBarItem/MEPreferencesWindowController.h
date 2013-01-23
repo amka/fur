@@ -8,8 +8,16 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface PreferencesWindowController : NSWindowController <NSWindowDelegate> {
+#import "AFHTTPRequestOperation.h"
+#import "SBJson.h"
+#import "NSDictionary+URLEncoding.h"
+#import "MEConstants.h"
+
+@interface PreferencesWindowController : NSWindowController <NSWindowDelegate, NSTextFieldDelegate> {
     BOOL autodiscover;
+    BOOL amAutoComplete;
+    NSMutableArray *completionWords;
+    SBJsonParser *_jsonParser;
 }
 
 @property (strong) IBOutlet NSWindow *preferencesWindow;
@@ -17,7 +25,5 @@
 @property (weak) IBOutlet NSButton *locationDiscoverField;
 @property (weak) IBOutlet NSTextField *locationField;
 @property (weak) IBOutlet NSMatrix *unitsField;
-
-
 
 @end

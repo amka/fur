@@ -141,19 +141,19 @@
                   weatherString = [NSString stringWithFormat:@"%@˚F", [[condition valueForKey:@"temp_F"] objectAtIndex:0]];
               }
                 [statusItem setTitle:weatherString];
-              [self notifyUserWithTitle:NSLocalizedString(@"Current condition is",@"")
-                        informativeText:NSLocalizedString(weatherString, @"")];
+//              [self notifyUserWithTitle:NSLocalizedString(@"Current condition is",@"")
+//                        informativeText:NSLocalizedString(weatherString, @"")];
           }];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if ([keyPath isEqualToString:@"locationName"]){
-        weatherTimer = [NSTimer scheduledTimerWithTimeInterval:kWWOUpdateInterval
-                                                        target:self
-                                                      selector:@selector(handleWeatherTimer:)
-                                                      userInfo:nil
-                                                       repeats:YES];
+//        weatherTimer = [NSTimer scheduledTimerWithTimeInterval:kWWOUpdateInterval
+//                                                        target:self
+//                                                      selector:@selector(handleWeatherTimer:)
+//                                                      userInfo:nil
+//                                                       repeats:YES];
         
     } else if ([keyPath isEqualToString:@"launchAtLogin"]) {
         if ([[change valueForKey:@"new"] integerValue] == 1)
@@ -184,7 +184,7 @@
 - (void)addAppAsLoginItem
 {
     NSString *appPath = [[NSBundle mainBundle] bundlePath];
-    CFURLRef *url = (CFURLRef)CFBridgingRetain([NSURL fileURLWithPath:appPath]);
+    CFURLRef url = (CFURLRef)CFBridgingRetain([NSURL fileURLWithPath:appPath]);
     
     LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
     

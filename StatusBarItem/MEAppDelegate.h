@@ -13,15 +13,7 @@
 #import "SBJson.h"
 #import "NSDictionary+URLEncoding.h"
 #import "MEPreferencesWindowController.h"
-
-
-// Default API settings
-#define kWWOBaseUrl         @"http://www.worldweatheronline.com/feed/"
-#define kWWOKey             @"d5847c233f203410121512"
-#define kWWOFormat          @"json"
-#define kWWOWeatherPath     @"weather.ashx"
-#define kWWOUpdateInterval  900
-
+#import "MEConstants.h"
 
 @interface MEAppDelegate : NSObject <NSApplicationDelegate> {    
     NSStatusItem *statusItem;
