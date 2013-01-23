@@ -49,4 +49,7 @@
 - (void)handleUrl:(NSURL *)url withBlock:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success;
 - (void)handleWeatherTimer:(NSTimer *)timer;
 - (void)deduplicateRunningInstances;
+
+- (void)addAppAsLoginItem;
+- (void)removeAppFromLoginItems;
 @end
