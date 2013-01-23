@@ -12,18 +12,24 @@
 #import "SBJson.h"
 #import "NSDictionary+URLEncoding.h"
 #import "MEConstants.h"
+#import "METextEditor.h"
 
 @interface PreferencesWindowController : NSWindowController <NSWindowDelegate, NSTextFieldDelegate> {
     BOOL autodiscover;
     BOOL amAutoComplete;
     NSMutableArray *completionWords;
     SBJsonParser *_jsonParser;
+    
+    METextEditor *_meTextEditor;
 }
+
+@property BOOL animate;
 
 @property (strong) IBOutlet NSWindow *preferencesWindow;
 
 @property (weak) IBOutlet NSButton *locationDiscoverField;
 @property (weak) IBOutlet NSTextField *locationField;
 @property (weak) IBOutlet NSMatrix *unitsField;
+
 
 @end

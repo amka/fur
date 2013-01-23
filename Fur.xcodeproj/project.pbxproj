@@ -44,6 +44,7 @@
 		A9723F3D16AD570C003D4D54 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = A9723F3016AD570C003D4D54 /* SBJsonUTF8Stream.m */; };
 		A9723F3E16AD570C003D4D54 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A9723F3216AD570C003D4D54 /* SBJsonWriter.m */; };
 		A9723F4016AD65B2003D4D54 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9723F3F16AD65B2003D4D54 /* SystemConfiguration.framework */; };
+		A9EF14A316B0697A00FF11DC /* METextEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF14A216B0697A00FF11DC /* METextEditor.m */; };
 		A9FE787E16AEB9BB000F57A3 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FE787D16AEB9BB000F57A3 /* CoreServices.framework */; };
 		A9FE788016AEBC9D000F57A3 /* clouds.icns in Resources */ = {isa = PBXBuildFile; fileRef = A9FE787F16AEBC9D000F57A3 /* clouds.icns */; };
 /* End PBXBuildFile section */
@@ -131,6 +132,8 @@
 		A9723F3116AD570C003D4D54 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		A9723F3216AD570C003D4D54 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		A9723F3F16AD65B2003D4D54 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A9EF14A116B0697A00FF11DC /* METextEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = METextEditor.h; sourceTree = "<group>"; };
+		A9EF14A216B0697A00FF11DC /* METextEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = METextEditor.m; sourceTree = "<group>"; };
 		A9FE787D16AEB9BB000F57A3 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		A9FE787F16AEBC9D000F57A3 /* clouds.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = clouds.icns; path = ../clouds.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -250,6 +253,8 @@
 				A9723F1616AD548F003D4D54 /* NSDictionary+URLEncoding.h */,
 				A9723F1716AD548F003D4D54 /* NSDictionary+URLEncoding.m */,
 				A946CEDA16B01A72003893D8 /* MEConstants.h */,
+				A9EF14A116B0697A00FF11DC /* METextEditor.h */,
+				A9EF14A216B0697A00FF11DC /* METextEditor.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -483,6 +488,7 @@
 				A93FD0A416B0424800734B51 /* AFURLConnectionOperation.m in Sources */,
 				A93FD0A516B0424800734B51 /* AFXMLRequestOperation.m in Sources */,
 				A93FD0A616B0424800734B51 /* UIImageView+AFNetworking.m in Sources */,
+				A9EF14A316B0697A00FF11DC /* METextEditor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
