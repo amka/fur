@@ -60,7 +60,7 @@
     
     [statusItem setTitle:[NSString stringWithFormat:@"--˚%@", weatherUnit]];
     [statusItem setHighlightMode:YES];
-    [statusItem setImage:[NSImage imageNamed:@"Status.png"]];
+    [statusItem setImage:[NSImage imageNamed:@"23.png"]];
     [statusItem setAlternateImage:[NSImage imageNamed:@"StatusHighlighted.png"]];
     // Insert code here to initialize your application
     [statusItem setMenu:_statusMenu];
@@ -76,6 +76,14 @@
 
 - (IBAction)refreshCondition:(id)sender {
     [weatherTimer fire];
+}
+
+- (IBAction)shareCondition:(id)sender {
+
+    NSString *conditionString = [NSString stringWithFormat:@"In %@ currently is %@", [[NSUserDefaults standardUserDefaults] stringForKey:@"locationName"], [statusItem title]];
+    
+    NSSharingService *twitterSharingService = [NSSharingService sharingServiceNamed:NSSharingServiceNamePostOnTwitter];
+    [twitterSharingService performWithItems:[NSArray arrayWithObject:conditionString]];
 }
 
 - (void)quit:(id)sender

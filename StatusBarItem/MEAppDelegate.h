@@ -15,7 +15,7 @@
 #import "MEPreferencesWindowController.h"
 #import "MEConstants.h"
 
-@interface MEAppDelegate : NSObject <NSApplicationDelegate> {    
+@interface MEAppDelegate : NSObject <NSApplicationDelegate, NSSharingServicePickerDelegate> {
     NSStatusItem *statusItem;
     NSImage *statusImage;
     NSImage *statusHighlightImage;
@@ -36,6 +36,7 @@
 - (IBAction)quit:(id)sender;
 - (IBAction)showPreferencesWindow:(id)sender;
 - (IBAction)refreshCondition:(id)sender;
+- (IBAction)shareCondition:(id)sender;
 
 - (void)notifyUserWithTitle:(NSString *)title informativeText:(NSString *)informativeText;
 - (void)handleUrl:(NSURL *)url withBlock:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success;

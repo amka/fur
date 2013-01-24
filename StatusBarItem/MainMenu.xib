@@ -35,27 +35,45 @@
 			<object class="NSMenu" id="210420412">
 				<string key="NSTitle"/>
 				<array class="NSMutableArray" key="NSMenuItems">
+					<object class="NSMenuItem" id="971020878">
+						<reference key="NSMenu" ref="210420412"/>
+						<string key="NSTitle">Share</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<object class="NSCustomResource" key="NSOnImage" id="947843910">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">NSMenuCheckmark</string>
+						</object>
+						<object class="NSCustomResource" key="NSMixedImage" id="8377121">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">NSMenuMixedState</string>
+						</object>
+					</object>
+					<object class="NSMenuItem" id="293119663">
+						<reference key="NSMenu" ref="210420412"/>
+						<bool key="NSIsDisabled">YES</bool>
+						<bool key="NSIsSeparator">YES</bool>
+						<string key="NSTitle"/>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="947843910"/>
+						<reference key="NSMixedImage" ref="8377121"/>
+					</object>
 					<object class="NSMenuItem" id="583066998">
 						<reference key="NSMenu" ref="210420412"/>
 						<string key="NSTitle">Refresh</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<object class="NSCustomResource" key="NSOnImage" id="51599666">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">NSMenuCheckmark</string>
-						</object>
-						<object class="NSCustomResource" key="NSMixedImage" id="595782331">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">NSMenuMixedState</string>
-						</object>
+						<reference key="NSOnImage" ref="947843910"/>
+						<reference key="NSMixedImage" ref="8377121"/>
 					</object>
 					<object class="NSMenuItem" id="272694032">
 						<reference key="NSMenu" ref="210420412"/>
 						<string key="NSTitle">Preferences…</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="51599666"/>
-						<reference key="NSMixedImage" ref="595782331"/>
+						<reference key="NSOnImage" ref="947843910"/>
+						<reference key="NSMixedImage" ref="8377121"/>
 					</object>
 					<object class="NSMenuItem" id="453999395">
 						<reference key="NSMenu" ref="210420412"/>
@@ -64,16 +82,16 @@
 						<string key="NSTitle"/>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="51599666"/>
-						<reference key="NSMixedImage" ref="595782331"/>
+						<reference key="NSOnImage" ref="947843910"/>
+						<reference key="NSMixedImage" ref="8377121"/>
 					</object>
 					<object class="NSMenuItem" id="14654026">
 						<reference key="NSMenu" ref="210420412"/>
 						<string key="NSTitle">Quit</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="51599666"/>
-						<reference key="NSMixedImage" ref="595782331"/>
+						<reference key="NSOnImage" ref="947843910"/>
+						<reference key="NSMixedImage" ref="8377121"/>
 					</object>
 				</array>
 			</object>
@@ -126,6 +144,22 @@
 					</object>
 					<int key="connectionID">557</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">shareCondition</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="971020878"/>
+					</object>
+					<int key="connectionID">561</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">shareCondition:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="971020878"/>
+					</object>
+					<int key="connectionID">562</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -171,6 +205,8 @@
 							<reference ref="453999395"/>
 							<reference ref="272694032"/>
 							<reference ref="583066998"/>
+							<reference ref="971020878"/>
+							<reference ref="293119663"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -194,6 +230,16 @@
 						<reference key="object" ref="583066998"/>
 						<reference key="parent" ref="210420412"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">559</int>
+						<reference key="object" ref="971020878"/>
+						<reference key="parent" ref="210420412"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">560</int>
+						<reference key="object" ref="293119663"/>
+						<reference key="parent" ref="210420412"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -207,12 +253,14 @@
 				<string key="539.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="547.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="555.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="559.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="560.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">558</int>
+			<int key="maxID">562</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -239,10 +287,15 @@
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="shareCondition">NSMenuItem</string>
 						<string key="statusMenu">NSMenu</string>
 						<string key="window">NSWindow</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="shareCondition">
+							<string key="name">shareCondition</string>
+							<string key="candidateClassName">NSMenuItem</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="statusMenu">
 							<string key="name">statusMenu</string>
 							<string key="candidateClassName">NSMenu</string>

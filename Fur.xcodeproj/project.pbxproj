@@ -44,6 +44,7 @@
 		A9723F3D16AD570C003D4D54 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = A9723F3016AD570C003D4D54 /* SBJsonUTF8Stream.m */; };
 		A9723F3E16AD570C003D4D54 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A9723F3216AD570C003D4D54 /* SBJsonWriter.m */; };
 		A9723F4016AD65B2003D4D54 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9723F3F16AD65B2003D4D54 /* SystemConfiguration.framework */; };
+		A98A727316B1944B00643647 /* 23.png in Resources */ = {isa = PBXBuildFile; fileRef = A98A727216B1944B00643647 /* 23.png */; };
 		A9EF14A316B0697A00FF11DC /* METextEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF14A216B0697A00FF11DC /* METextEditor.m */; };
 		A9FE787E16AEB9BB000F57A3 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FE787D16AEB9BB000F57A3 /* CoreServices.framework */; };
 		A9FE788016AEBC9D000F57A3 /* clouds.icns in Resources */ = {isa = PBXBuildFile; fileRef = A9FE787F16AEBC9D000F57A3 /* clouds.icns */; };
@@ -132,6 +133,7 @@
 		A9723F3116AD570C003D4D54 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		A9723F3216AD570C003D4D54 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		A9723F3F16AD65B2003D4D54 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A98A727216B1944B00643647 /* 23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 23.png; sourceTree = "<group>"; };
 		A9EF14A116B0697A00FF11DC /* METextEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = METextEditor.h; sourceTree = "<group>"; };
 		A9EF14A216B0697A00FF11DC /* METextEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = METextEditor.m; sourceTree = "<group>"; };
 		A9FE787D16AEB9BB000F57A3 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
@@ -346,6 +348,7 @@
 		A9DF8DDE16B003B700557906 /* Weather icons */ = {
 			isa = PBXGroup;
 			children = (
+				A98A727216B1944B00643647 /* 23.png */,
 			);
 			name = "Weather icons";
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				A96320FE169C214500FF6DA1 /* StatusHighlighted.png in Resources */,
 				A9632108169C253400FF6DA1 /* PreferencesWindow.xib in Resources */,
 				A9FE788016AEBC9D000F57A3 /* clouds.icns in Resources */,
+				A98A727316B1944B00643647 /* 23.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
