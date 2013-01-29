@@ -58,10 +58,10 @@
     NSStatusBar * systemStatusBar = [NSStatusBar systemStatusBar];
     statusItem = [systemStatusBar statusItemWithLength:NSVariableStatusItemLength];
     
-    [statusItem setTitle:[NSString stringWithFormat:@"--˚%@", weatherUnit]];
+    [statusItem setTitle:@"N/A"];
     [statusItem setHighlightMode:YES];
     [statusItem setImage:[NSImage imageNamed:@"23.png"]];
-    [statusItem setAlternateImage:[NSImage imageNamed:@"StatusHighlighted.png"]];
+    [statusItem setAlternateImage:[NSImage imageNamed:@"23.png"]];
     // Insert code here to initialize your application
     [statusItem setMenu:_statusMenu];
 }

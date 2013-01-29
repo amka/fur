@@ -45,6 +45,7 @@
 		A9723F3E16AD570C003D4D54 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A9723F3216AD570C003D4D54 /* SBJsonWriter.m */; };
 		A9723F4016AD65B2003D4D54 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9723F3F16AD65B2003D4D54 /* SystemConfiguration.framework */; };
 		A98A727316B1944B00643647 /* 23.png in Resources */ = {isa = PBXBuildFile; fileRef = A98A727216B1944B00643647 /* 23.png */; };
+		A9CDE8ED16B287D2003C87CE /* MEWebUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CDE8EC16B287D2003C87CE /* MEWebUtility.m */; };
 		A9EF14A316B0697A00FF11DC /* METextEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF14A216B0697A00FF11DC /* METextEditor.m */; };
 		A9FE787E16AEB9BB000F57A3 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FE787D16AEB9BB000F57A3 /* CoreServices.framework */; };
 		A9FE788016AEBC9D000F57A3 /* clouds.icns in Resources */ = {isa = PBXBuildFile; fileRef = A9FE787F16AEBC9D000F57A3 /* clouds.icns */; };
@@ -134,6 +135,8 @@
 		A9723F3216AD570C003D4D54 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		A9723F3F16AD65B2003D4D54 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A98A727216B1944B00643647 /* 23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 23.png; sourceTree = "<group>"; };
+		A9CDE8EB16B287D2003C87CE /* MEWebUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEWebUtility.h; sourceTree = "<group>"; };
+		A9CDE8EC16B287D2003C87CE /* MEWebUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEWebUtility.m; sourceTree = "<group>"; };
 		A9EF14A116B0697A00FF11DC /* METextEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = METextEditor.h; sourceTree = "<group>"; };
 		A9EF14A216B0697A00FF11DC /* METextEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = METextEditor.m; sourceTree = "<group>"; };
 		A9FE787D16AEB9BB000F57A3 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
@@ -257,6 +260,8 @@
 				A946CEDA16B01A72003893D8 /* MEConstants.h */,
 				A9EF14A116B0697A00FF11DC /* METextEditor.h */,
 				A9EF14A216B0697A00FF11DC /* METextEditor.m */,
+				A9CDE8EB16B287D2003C87CE /* MEWebUtility.h */,
+				A9CDE8EC16B287D2003C87CE /* MEWebUtility.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -493,6 +498,7 @@
 				A93FD0A516B0424800734B51 /* AFXMLRequestOperation.m in Sources */,
 				A93FD0A616B0424800734B51 /* UIImageView+AFNetworking.m in Sources */,
 				A9EF14A316B0697A00FF11DC /* METextEditor.m in Sources */,
+				A9CDE8ED16B287D2003C87CE /* MEWebUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
