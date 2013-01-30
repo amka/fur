@@ -22,6 +22,8 @@
     
     NSTimer *weatherTimer;
     
+    NSUserDefaults *userDefaults;
+    
     SBJsonParser *_jsonParser;
     NSString *_responseString;
     NSString *weatherUnit;
@@ -32,6 +34,16 @@
 @property (retain) PreferencesWindowController *preferencesController;
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSMenu *statusMenu;
+
+// Extended view
+@property (weak) IBOutlet NSView *extendedView;
+@property (weak) IBOutlet NSTextField *cityLabel;
+@property (weak) IBOutlet NSTextField *conditionLabel;
+@property (weak) IBOutlet NSTextField *tempLabel;
+@property (weak) IBOutlet NSTextField *observationTimeLabel;
+@property (weak) IBOutlet NSImageView *conditionImageView;
+@property (weak) IBOutlet NSTextField *pressureLabel;
+
 
 - (IBAction)quit:(id)sender;
 - (IBAction)showPreferencesWindow:(id)sender;
