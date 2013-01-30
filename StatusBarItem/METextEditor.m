@@ -42,9 +42,6 @@
     @catch (NSException *exception) {
         [super insertCompletion:word forPartialWordRange:charRange movement:movement isFinal:flag];
     }
-    
-    
-    NSLog(@"insertCompletion: %@", [[word componentsSeparatedByString:@", "] objectAtIndex:0]);
 }
 
 @end

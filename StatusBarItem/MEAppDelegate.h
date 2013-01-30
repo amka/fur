@@ -55,6 +55,4 @@
 - (void)handleWeatherTimer:(NSTimer *)timer;
 - (void)deduplicateRunningInstances;
 
-- (void)addAppAsLoginItem;
-- (void)removeAppFromLoginItems;
 @end

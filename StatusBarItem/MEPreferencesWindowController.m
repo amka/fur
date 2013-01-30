@@ -65,7 +65,6 @@
                                                   kWWOSearchPath,
                                                   [urlParams urlEncodedString]]];
             
-            NSLog(@"%@", wwoUrl);
             NSURLRequest *request = [NSURLRequest requestWithURL:wwoUrl];
             AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc]initWithRequest:request];
             [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation , id responseObject) {
@@ -83,14 +82,13 @@
                         NSString *areaName = [[[item objectForKey:@"areaName"] objectAtIndex:0] objectForKey:@"value"];
                         NSString *country = [[[item objectForKey:@"country"] objectAtIndex:0] objectForKey:@"value" ];
                         NSString *region = [[[item objectForKey:@"region"] objectAtIndex:0] objectForKey:@"value" ];
-                        [completionWords addObject:[NSString stringWithFormat:@"%@, %@, %@",
-                                                    areaName,
-                                                    region,
-                                                    country,
-                                                    nil]];
-                    }
-                    NSLog(@"%@", completionWords);
-                
+                        NSString *cityStr = [NSString stringWithFormat:@"%@, %@, %@",
+                                             areaName,
+                                             region,
+                                             country,
+                                             nil];
+                        [completionWords addObject:cityStr];
+                    }                
                 }
 
                 // Enable locationField and set it as focused

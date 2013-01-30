@@ -14,6 +14,7 @@
 - (id)init {
     if (self = [super init]) {
         _jsonParser = [[SBJsonParser alloc] init];
+        userDefaults = [NSUserDefaults standardUserDefaults];
     }
     return self;
 }
@@ -24,7 +25,7 @@
     [self deduplicateRunningInstances];
     
     // Check for locationName in user defaults
-    if ([[NSUserDefaults standardUserDefaults] stringForKey:@"locationName"])
+    if ([userDefaults stringForKey:@"locationName"])
     {
         weatherTimer = [NSTimer scheduledTimerWithTimeInterval:kWWOUpdateInterval
                                                         target:self
@@ -36,25 +37,25 @@
         [self showPreferencesWindow:self];
     }
     
-    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"units"] == 0)
+    if ([userDefaults integerForKey:@"units"] == 0)
     {
         weatherUnit = @"C";
     } else {
         weatherUnit = @"F";
     }
 
-    [[NSUserDefaults standardUserDefaults] addObserver:self
-                                            forKeyPath:@"preferencesUpdated"
-                                               options:NSKeyValueObservingOptionNew
-                                               context:NULL];
-    [[NSUserDefaults standardUserDefaults] addObserver:self
-                                            forKeyPath:@"locationName"
-                                               options:NSKeyValueObservingOptionNew
-                                               context:NULL];
-    [[NSUserDefaults standardUserDefaults] addObserver:self
-                                            forKeyPath:@"launchAtLogin"
-                                               options:NSKeyValueObservingOptionNew
-                                               context:NULL];
+    [userDefaults addObserver:self
+                   forKeyPath:@"preferencesUpdated"
+                      options:NSKeyValueObservingOptionNew
+                      context:NULL];
+    [userDefaults addObserver:self
+                   forKeyPath:@"locationName"
+                      options:NSKeyValueObservingOptionNew
+                      context:NULL];
+    [userDefaults addObserver:self
+                   forKeyPath:@"launchAtLogin"
+                      options:NSKeyValueObservingOptionNew
+                      context:NULL];
     
     NSStatusBar * systemStatusBar = [NSStatusBar systemStatusBar];
     statusItem = [systemStatusBar statusItemWithLength:NSVariableStatusItemLength];
@@ -86,7 +87,7 @@
 
 - (IBAction)shareCondition:(id)sender {
 
-    NSString *conditionString = [NSString stringWithFormat:@"In %@ currently is %@", [[NSUserDefaults standardUserDefaults] stringForKey:@"locationName"], [statusItem title]];
+    NSString *conditionString = [NSString stringWithFormat:@"In %@ currently is %@", [userDefaults stringForKey:@"locationName"], [statusItem title]];
     
     NSSharingService *twitterSharingService = [NSSharingService sharingServiceNamed:NSSharingServiceNamePostOnTwitter];
     [twitterSharingService performWithItems:[NSArray arrayWithObject:conditionString]];
@@ -99,9 +100,9 @@
 
 - (void)applicationWillTerminate:(NSNotification *)notification
 {
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    [userDefaults synchronize];
     // remove observers
-    [[NSUserDefaults standardUserDefaults] removeObserver:self forKeyPath:@"preferencesUpdated"];
+//    [userDefaults removeObserver:self forKeyPath:@"preferencesUpdated"];
     [weatherTimer invalidate];
 }
 
@@ -119,7 +120,9 @@
 
 - (void)handleUrl:(NSURL *)url withBlock:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
 {
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url
+                                             cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
+                                         timeoutInterval:10];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc]initWithRequest:request];
     [operation setCompletionBlockWithSuccess:success failure:nil];
     //    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:success failure:nil];
@@ -148,7 +151,7 @@
               NSDictionary *condition = [[json objectForKey:@"data"] objectForKey:@"current_condition"];
               
               NSString *weatherString;
-              if ([[NSUserDefaults standardUserDefaults] integerForKey:@"units"] == 0) {
+              if ([userDefaults integerForKey:@"units"] == 0) {
                   weatherString = [NSString stringWithFormat:@"%@˚C", [[condition valueForKey:@"temp_C"] objectAtIndex:0]];
               } else {
                   weatherString = [NSString stringWithFormat:@"%@˚F", [[condition valueForKey:@"temp_F"] objectAtIndex:0]];
@@ -157,7 +160,7 @@
               [statusItem setTitle:weatherString];
               [_tempLabel setStringValue:weatherString];
 
-              [_cityLabel setStringValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"locationName"]];
+              [_cityLabel setStringValue:[userDefaults stringForKey:@"locationName"]];
               [_conditionLabel setStringValue:[[[[condition valueForKey:@"weatherDesc"] objectAtIndex:0] valueForKey:@"value"] objectAtIndex:0]];
               
               // Convert observation time from UTC to local
@@ -187,11 +190,15 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if ([keyPath isEqualToString:@"locationName"]){
-//        weatherTimer = [NSTimer scheduledTimerWithTimeInterval:kWWOUpdateInterval
-//                                                        target:self
-//                                                      selector:@selector(handleWeatherTimer:)
-//                                                      userInfo:nil
-//                                                       repeats:YES];
+        if (weatherTimer) {
+            [weatherTimer fire];
+        } else {
+            weatherTimer = [NSTimer scheduledTimerWithTimeInterval:kWWOUpdateInterval
+                                                            target:self
+                                                          selector:@selector(handleWeatherTimer:)
+                                                          userInfo:nil
+                                                           repeats:YES];
+        }
         
     } else if ([keyPath isEqualToString:@"launchAtLogin"]) {
         if ([[change valueForKey:@"new"] integerValue] == 1)
