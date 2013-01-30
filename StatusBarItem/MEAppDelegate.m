@@ -190,9 +190,7 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if ([keyPath isEqualToString:@"locationName"]){
-        if (weatherTimer) {
-            [weatherTimer fire];
-        } else {
+        if (!weatherTimer) {
             weatherTimer = [NSTimer scheduledTimerWithTimeInterval:kWWOUpdateInterval
                                                             target:self
                                                           selector:@selector(handleWeatherTimer:)
