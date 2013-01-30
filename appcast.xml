@@ -11,7 +11,7 @@
 							http://meamka.me/fur/rnotes/rnotes.html
 						</sparkle:releaseNotesLink>
             <pubDate>Wed, 30 Jan 2013 13:20:11 +0000</pubDate>
-            <enclosure url="http://meamka.me/fur/updates/0.5.3.zip" sparkle:version="2.0" length="1623481" type="application/octet-stream" sparkle:dsaSignature="MC0CFQCjdvjoMZdH0H/Q0FCAMb3HDuoGqgIUDoYe/ASZbxnOHLpE3rAC2WxuAOU=" />
+            <enclosure url="http://meamka.me/fur/updates/0.1.1.zip" sparkle:version="0.1.1" length="1623481" type="application/octet-stream" sparkle:dsaSignature="MC0CFQCjdvjoMZdH0H/Q0FCAMb3HDuoGqgIUDoYe/ASZbxnOHLpE3rAC2WxuAOU=" />
          </item>
    </channel>
 </rss>
