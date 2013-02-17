@@ -5,6 +5,14 @@
       <link>http://meamka.me/fur/appcast.xml</link>
       <description>Most recent changes with links to updates.</description>
       <language>en</language>
+        <item>
+            <title>Version 0.1.2 (1 fix)</title>
+						<sparkle:releaseNotesLink>
+							http://meamka.me/fur/rnotes/rnotes.html
+						</sparkle:releaseNotesLink>
+            <pubDate>Sun, 17 Feb 2013 12:20:11 +0000</pubDate>
+            <enclosure url="http://meamka.me/fur/updates/0.1.2.zip" sparkle:shortVersionString="0.1.2" sparkle:version="12" length="1623481" type="application/octet-stream" sparkle:dsaSignature="MCwCFGgjld+7Sh22KtgNo1cUh38oop7bAhQ524hWWSAsbxYkTF4ZWvyRzIIvyA==" />
+         </item>
          <item>
             <title>Version 0.1.1 (1 new feature)</title>
 						<sparkle:releaseNotesLink>
