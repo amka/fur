@@ -46,10 +46,13 @@
 		A9723F3D16AD570C003D4D54 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = A9723F3016AD570C003D4D54 /* SBJsonUTF8Stream.m */; };
 		A9723F3E16AD570C003D4D54 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A9723F3216AD570C003D4D54 /* SBJsonWriter.m */; };
 		A9723F4016AD65B2003D4D54 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9723F3F16AD65B2003D4D54 /* SystemConfiguration.framework */; };
+		A97E0CEB16B952D8005C32CF /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A9A0A24616B94E5F0028C88C /* Sparkle.framework */; };
 		A98A727316B1944B00643647 /* 23.png in Resources */ = {isa = PBXBuildFile; fileRef = A98A727216B1944B00643647 /* 23.png */; };
 		A9A0A22F16B902650028C88C /* extendedViewBg.png in Resources */ = {isa = PBXBuildFile; fileRef = A9A0A22E16B902650028C88C /* extendedViewBg.png */; };
 		A9A0A23116B902700028C88C /* 143.png in Resources */ = {isa = PBXBuildFile; fileRef = A9A0A23016B902700028C88C /* 143.png */; };
 		A9A0A23316B91E9E0028C88C /* 113.png in Resources */ = {isa = PBXBuildFile; fileRef = A9A0A23216B91E9E0028C88C /* 113.png */; };
+		A9A0A24716B94E5F0028C88C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A0A24616B94E5F0028C88C /* Sparkle.framework */; };
+		A9A0A24916B94F6D0028C88C /* fur_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = A9A0A24816B94F6D0028C88C /* fur_pub.pem */; };
 		A9AE198916B9251F000EEB5D /* MEStartupUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AE198816B9251F000EEB5D /* MEStartupUtility.m */; };
 		A9C1C50E16B7EBCB00660FAB /* MEExtendedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C1C50D16B7EBCB00660FAB /* MEExtendedView.m */; };
 		A9C1C51716B7F1D600660FAB /* 368.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C1C51616B7F1D600660FAB /* 368.png */; };
@@ -69,6 +72,19 @@
 			remoteInfo = StatusBarItem;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A97E0CE916B952C3005C32CF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A97E0CEB16B952D8005C32CF /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A91C68BB16B8575200D7A5A0 /* 326.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 326.png; sourceTree = "<group>"; };
@@ -149,6 +165,8 @@
 		A9A0A22E16B902650028C88C /* extendedViewBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = extendedViewBg.png; sourceTree = "<group>"; };
 		A9A0A23016B902700028C88C /* 143.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 143.png; sourceTree = "<group>"; };
 		A9A0A23216B91E9E0028C88C /* 113.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 113.png; sourceTree = "<group>"; };
+		A9A0A24616B94E5F0028C88C /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		A9A0A24816B94F6D0028C88C /* fur_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fur_pub.pem; sourceTree = "<group>"; };
 		A9AE198716B9251F000EEB5D /* MEStartupUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEStartupUtility.h; sourceTree = "<group>"; };
 		A9AE198816B9251F000EEB5D /* MEStartupUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEStartupUtility.m; sourceTree = "<group>"; };
 		A9C1C50C16B7EBCB00660FAB /* MEExtendedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEExtendedView.h; sourceTree = "<group>"; };
@@ -171,6 +189,7 @@
 				A9FE787E16AEB9BB000F57A3 /* CoreServices.framework in Frameworks */,
 				A9723F4016AD65B2003D4D54 /* SystemConfiguration.framework in Frameworks */,
 				A96320C2169C1E3000FF6DA1 /* Cocoa.framework in Frameworks */,
+				A9A0A24716B94E5F0028C88C /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +234,7 @@
 		A96320B2169C1E3000FF6DA1 = {
 			isa = PBXGroup;
 			children = (
+				A9A0A24616B94E5F0028C88C /* Sparkle.framework */,
 				A93FD08A16B0424800734B51 /* AFNetworking */,
 				A9FE787D16AEB9BB000F57A3 /* CoreServices.framework */,
 				A9723F3F16AD65B2003D4D54 /* SystemConfiguration.framework */,
@@ -270,6 +290,7 @@
 		A96320C8169C1E3000FF6DA1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A9A0A24816B94F6D0028C88C /* fur_pub.pem */,
 				A96320C9169C1E3000FF6DA1 /* Fur-Info.plist */,
 				A96320CA169C1E3000FF6DA1 /* InfoPlist.strings */,
 				A96320CD169C1E3000FF6DA1 /* main.m */,
@@ -399,6 +420,7 @@
 				A96320B9169C1E3000FF6DA1 /* Sources */,
 				A96320BA169C1E3000FF6DA1 /* Frameworks */,
 				A96320BB169C1E3000FF6DA1 /* Resources */,
+				A97E0CE916B952C3005C32CF /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -476,6 +498,7 @@
 				A9A0A22F16B902650028C88C /* extendedViewBg.png in Resources */,
 				A9A0A23116B902700028C88C /* 143.png in Resources */,
 				A9A0A23316B91E9E0028C88C /* 113.png in Resources */,
+				A9A0A24916B94F6D0028C88C /* fur_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,6 +668,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StatusBarItem/Fur-Prefix.pch";
 				INFOPLIST_FILE = "StatusBarItem/Fur-Info.plist";
@@ -658,6 +685,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StatusBarItem/Fur-Prefix.pch";
 				INFOPLIST_FILE = "StatusBarItem/Fur-Info.plist";

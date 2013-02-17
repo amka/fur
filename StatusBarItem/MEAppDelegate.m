@@ -162,6 +162,7 @@
 
               [_cityLabel setStringValue:[userDefaults stringForKey:@"locationName"]];
               [_conditionLabel setStringValue:[[[[condition valueForKey:@"weatherDesc"] objectAtIndex:0] valueForKey:@"value"] objectAtIndex:0]];
+              [_pressureLabel setStringValue:[[condition valueForKey:@"pressure"] objectAtIndex:0]];
               
               // Convert observation time from UTC to local
               NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -170,12 +171,14 @@
               [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
               NSDate *date = [dateFormatter dateFromString:[[[condition valueForKey:@"observation_time"] objectAtIndex:0] substringToIndex:5]];
               
+              // Set observation time
               [dateFormatter setTimeZone:[NSTimeZone defaultTimeZone]];
               [_observationTimeLabel setStringValue:[NSString stringWithFormat:@"registered at %@", [dateFormatter stringFromDate:date]]];
 
+              // load condition image
               NSImage *conditionImage = [NSImage imageNamed:[NSString stringWithFormat:@"%@.png", [[condition valueForKey:@"weatherCode"] objectAtIndex:0]]];
 
-              NSLog(@"weatherCode: %@",[NSString stringWithFormat:@"%@", [[condition valueForKey:@"weatherCode"] objectAtIndex:0]]);
+//              NSLog(@"weatherCode: %@",[NSString stringWithFormat:@"%@", [[condition valueForKey:@"weatherCode"] objectAtIndex:0]]);
               if ([conditionImage isMemberOfClass:[NSNull class]]) {
                   [_conditionImageView setImage:[NSImage imageNamed:@"0.png"]];
               } else {
